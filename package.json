@@ -20,7 +20,13 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+<<<<<<< HEAD
+    "knex": "^0.14.2",
+    "nodemon": "^1.14.12",
+    "sqlite3": "^3.1.13"
+=======
     "superagent": "^3.8.2"
+>>>>>>> 3122421bcfa27c00057f41d6a72f7c9852e95e82
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -30,7 +36,7 @@
     "babel-register": "^6.26.0",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "jest": "^22.1.4",
+    "jest": "^22.2.1",
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.2.0",

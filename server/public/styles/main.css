@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  border: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#app {
+  background: url('../images/NightSky.jpeg');
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  color: antiquewhite;
+}

@@ -27,23 +27,23 @@ Why:
 'This response is to deep for you'
 
 How:
-'Rinse and Repeat'
-'Use Boiling Water'
-'Alovera cures all'
-'If its still itchy, seek medical attention'
-'Ginger Tea is great for this'
+"Rinse and Repeat"
+"Use Boiling Water"
+"Alovera cures all"
+"If its still itchy, seek medical attention"
+"Ginger Tea is great for this"
 
 Will:
-'Not in this lifetime'
-'The answer is within you'
-'Yaaaaass!'
-'Nope'
-'Well... maybe'
+"Not in this lifetime"
+"The answer is within you"
+"Yaaaaass!"
+"Nope"
+"Well... maybe"
 
 When:
-'At 5pm'
-'When the moon is in the 7th house'
-'Never. Sorry'
-'When you realise your inner truth'
-'In a few years, possibly'
+"At 5pm"
+"When the moon is in the 7th house"
+"Never. Sorry"
+"When you realise your inner truth"
+"In a few years, possibly"
 
