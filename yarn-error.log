@@ -1,5 +1,5 @@
 Arguments: 
-  /home/eda/.nvm/versions/node/v8.9.4/bin/node /usr/share/yarn/bin/yarn.js dev
+  /home/eda/.nvm/versions/node/v8.9.4/bin/node /usr/share/yarn/bin/yarn.js
 
 PATH: 
   /home/eda/.nvm/versions/node/v8.9.4/bin:/home/eda/bin:/home/eda/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin

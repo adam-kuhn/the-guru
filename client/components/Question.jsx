@@ -1,8 +1,8 @@
 import React from 'react'
 import request from 'superagent'
 
-class Question extends React.Component{
-  constructor(props) {
+class Question extends React.Component {
+  constructor (props) {
     super(props)
     this.state = {
       question: ''
@@ -10,25 +10,22 @@ class Question extends React.Component{
     this.getQuestion = this.getQuestion.bind(this)
     this.sendQuestion = this.sendQuestion.bind(this)
   }
-  getQuestion(evt){
+  getQuestion (evt) {
     this.setState({
       [evt.target.name]: evt.target.value
     })
   }
 
-  sendQuestion() {
+  sendQuestion () {
     request
       .post('/api/v1/responses')
-      // .set('Content-Type', 'application/json')
-      // .set('Accept', 'text/plain')
+      .set('Content-Type', 'application/json')
       .send(this.state)
-      // console.log('sent', this.state)
-      // .then (() => {
-      //   res.send(this.state)
-      //           // console.log('complete')
-      // })
+      .then(result => {
+        console.log(result)
+      })
   }
-  render() {
+  render () {
     return (
       <div>
         <form>
