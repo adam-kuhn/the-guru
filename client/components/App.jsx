@@ -12,7 +12,7 @@ class App extends React.Component {
   }
   render () {
     return (
-      <div className ="page">
+      <div className="page">
         <h1 className="header">The Great All Knowing Guru</h1>
         <Question />
       </div>

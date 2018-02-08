@@ -1,12 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const request = require('superagent')
+
+const db = require('../db')
 
 router.get('/', function (req, res) {
-  request
-    .get('http://localhost:3000/api/v1/responses')
-    .then(result => {
-      res.json(result.body)
+  db.findResponse()
+    .then(allResponses => {
+      const randomIndex = Math.floor(Math.random() * allResponses.length) + 1 
+      return allResponses[randomIndex]
     })
 })
 
