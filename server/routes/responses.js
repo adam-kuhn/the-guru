@@ -3,12 +3,21 @@ const router = express.Router()
 
 const db = require('../db')
 
-router.get('/', function (req, res) {
-  db.findResponse()
+// let word = ''
+// let question = ''
+
+function randomise (array) { return Math.floor(Math.random() * array.length) + 0 }
+
+router.post('/', (req, res) => {
+  db.findResponse(req.body.question)
     .then(allResponses => {
-      const randomIndex = Math.floor(Math.random() * allResponses.length) + 1 
-      return allResponses[randomIndex]
+      const respArray = JSON.parse(allResponses[0].response)
+      return console.log(respArray[randomise(respArray)])
     })
 })
+
+// router.get('/data', (req, res) => {
+//
+// })
 
 module.exports = router
