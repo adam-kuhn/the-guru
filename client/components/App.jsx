@@ -7,18 +7,17 @@ class App extends React.Component {
     this.state = {
       question: '',
       word: '',
-      response: '' 
+      response: ''
     }
   }
   render () {
     return (
-    <div>
-      <h1>The Great All Knowing Guru</h1>
-      <Question />
-    </div>
+      <div className ="page">
+        <h1 className="header">The Great All Knowing Guru</h1>
+        <Question />
+      </div>
     )
   }
-} 
+}
 
 export default App
-
