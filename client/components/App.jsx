@@ -1,18 +1,21 @@
 import React from 'react'
+import Question from './Question'
 
 class App extends React.Component {
   constructor () {
     super()
     this.state = {
-      question = '',
-      word = '',
-      response = '' 
+      question: '',
+      word: '',
+      response: '' 
     }
   }
   render () {
     return (
-    
-    <h1>React development has begun!</h1>
+    <div>
+      <h1>The Great All Knowing Guru</h1>
+      <Question />
+    </div>
     )
   }
 } 
