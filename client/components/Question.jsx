@@ -6,6 +6,12 @@ class Question extends React.Component{
     this.state = {
       question: ''
     }
+    this.getQuestion = this.getQuestion.bind(this)
+  }
+  getQuestion(evt){
+    this.setState({
+      [evt.target.name]: evt.target.value
+    })
   }
   render() {
     return (
@@ -13,7 +19,7 @@ class Question extends React.Component{
         <form>
           <label>What would you like to know?
              {/*add onChange  */}
-            <input type='text' />
+            <input type='text' name='question' onChange={this.getQuestion} />
           </label>
           {/* add onClick */}
           <button type='button'>Submit Your Question</button>
