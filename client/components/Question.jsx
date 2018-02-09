@@ -31,11 +31,10 @@ class Question extends React.Component {
   render () {
     return (
       <div>
-        <form>
         <Sound url="/sounds/Yoda.m4a" playStatus={Sound.status.PLAYING} />
-          <label>What would you like to know?
-            <input type='text' name='question' onChange={this.getQuestion} />
-          </label>
+        <form className='form'>
+          <label>What would you like to know?  </label>
+          <input type='text' name='question' onChange={this.getQuestion} />
           {/* add onClick */}
           <button type='button' onClick={this.sendQuestion}>Submit Your Question</button>
         </form>
