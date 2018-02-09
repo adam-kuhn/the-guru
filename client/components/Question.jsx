@@ -1,6 +1,8 @@
 import React from 'react'
 import request from 'superagent'
 
+import Sound from 'react-sound'
+
 class Question extends React.Component {
   constructor (props) {
     super(props)
@@ -30,6 +32,7 @@ class Question extends React.Component {
     return (
       <div>
         <form>
+        <Sound url="/sounds/Yoda.m4a" playStatus={Sound.status.PLAYING} />
           <label>What would you like to know?
             <input type='text' name='question' onChange={this.getQuestion} />
           </label>
