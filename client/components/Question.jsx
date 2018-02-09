@@ -22,7 +22,8 @@ class Question extends React.Component {
       .set('Content-Type', 'application/json')
       .send(this.state)
       .then(result => {
-        console.log(result)
+        this.props.display(result.body.resp)
+        console.log(result.body)
       })
   }
   render () {

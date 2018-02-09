@@ -12,7 +12,8 @@ router.post('/', (req, res) => {
   db.findResponse(req.body.question)
     .then(allResponses => {
       const respArray = JSON.parse(allResponses[0].response)
-      return console.log(respArray[randomise(respArray)])
+      const resp = respArray[randomise(respArray)]
+      res.status(200).send({resp})
     })
 })
 
