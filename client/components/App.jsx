@@ -5,8 +5,6 @@ class App extends React.Component {
   constructor () {
     super()
     this.state = {
-      question: '',
-      word: '',
       response: ''
     }
     this.displayResult = this.displayResult.bind(this)
