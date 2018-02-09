@@ -3,9 +3,6 @@ const router = express.Router()
 
 const db = require('../db')
 
-// let word = ''
-// let question = ''
-
 function randomise (array) { return Math.floor(Math.random() * array.length) + 0 }
 
 router.post('/', (req, res) => {
@@ -16,16 +13,13 @@ router.post('/', (req, res) => {
   db.findResponse(word)
     .then(allResponses => {
       const respArray = JSON.parse(allResponses[0].response)
-      return respArray[randomise(respArray)]
+      const resp = respArray[randomise(respArray)]
+      res.status(200).send({resp})
     })
     .catch((err) => {
-      err = 'Computer says nooooo'
-      return err
+      // err = 'Computer says nooooo'
+      res.status(500).send('DATABASE ERROR : ' + err.message)
     })
 })
-
-// router.get('/data', (req, res) => {
-//
-// })
 
 module.exports = router
