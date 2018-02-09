@@ -1,8 +1,6 @@
 import React from 'react'
 import request from 'superagent'
 
-import Sound from 'react-sound'
-
 class Question extends React.Component {
   constructor (props) {
     super(props)
@@ -18,25 +16,29 @@ class Question extends React.Component {
     })
   }
 
-  sendQuestion () {
-    request
-      .post('/api/v1/responses')
-      .set('Content-Type', 'application/json')
-      .send(this.state)
-      .then(result => {
-        this.props.display(result.body.resp)
-        console.log(result.body)
-      })
+  sendQuestion (e) {
+    e.preventDefault()
+    let question = this.state.question
+    let words = question.split(' ')
+    let word = words[0].toLowerCase()
+    let qWords = ['who', 'what', 'how', 'when', 'where', 'will', 'why']
+    if (qWords.includes(word)) {
+      request
+        .post('/api/v1/responses')
+        .set('Content-Type', 'application/json')
+        .send({word})
+        .then(result => {
+          this.props.display(result.body.resp)
+        })
+    } else { this.props.display('Computer says noo....') }
   }
   render () {
     return (
       <div>
-        <Sound url="/sounds/Yoda.m4a" playStatus={Sound.status.PLAYING} />
-        <form className='form'>
+        <form className='form' onSubmit={this.sendQuestion}>
           <label>What would you like to know?  </label>
           <input type='text' name='question' onChange={this.getQuestion} />
-          {/* add onClick */}
-          <button type='button' onClick={this.sendQuestion}>Submit Your Question</button>
+          <button>Submit Your Question</button>
         </form>
       </div>
     )

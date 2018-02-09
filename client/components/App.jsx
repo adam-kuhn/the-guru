@@ -24,6 +24,7 @@ class App extends React.Component {
       <div className="page">
         <h1 className="header">The Great All Knowing Guru</h1>
         <Question display={this.displayResult}/>
+        <br/>
         {this.state.showResponse && <Response result = {this.state.response} />}
       </div>
     )

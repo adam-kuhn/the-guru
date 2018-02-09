@@ -23,6 +23,7 @@
     "knex": "^0.14.2",
     "nodemon": "^1.14.12",
     "react-sound": "^1.1.0",
+    "reshake": "^1.0.8",
     "sqlite3": "^3.1.13",
     "superagent": "^3.8.2"
   },
