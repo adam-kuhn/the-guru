@@ -9,10 +9,18 @@ const db = require('../db')
 function randomise (array) { return Math.floor(Math.random() * array.length) + 0 }
 
 router.post('/', (req, res) => {
-  db.findResponse(req.body.question)
+  let question = req.body.question
+  let words = question.split(' ')
+  let word = words[0]
+
+  db.findResponse(word)
     .then(allResponses => {
       const respArray = JSON.parse(allResponses[0].response)
-      return console.log(respArray[randomise(respArray)])
+      return respArray[randomise(respArray)]
+    })
+    .catch((err) => {
+      err = 'Computer says nooooo'
+      return err
     })
 })
 

@@ -98,7 +98,7 @@ const how = [
   "You're on your own",
   "Rinse and Repeat",
   "Use Boiling Water",
-  "Alovera cures all",
+  "Aloe Vera cures all",
   "If its still itchy, seek medical attention",
   "Ginger Tea is great for this",
   "With greatness",
